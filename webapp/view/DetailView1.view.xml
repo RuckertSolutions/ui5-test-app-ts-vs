@@ -1,0 +1,21 @@
+<mvc:View xmlns:smarttable="sap.ui.comp.smarttable" controllerName="project1.controller.DetailView1"
+  xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+  xmlns="sap.m">
+  <Page id="page" title="{parts: ['i18n>title_details', '/categoryId'], formatter: 'jQuery.sap.formatMessage'}" showNavButton="true" navButtonPress="onNavBack">
+    <content>
+      <!-- <Table visible="{= ${/categoryId !== ''}}" id="table2" items="{path: 'invoice>/Products', filters: [{path :'CategoryID', operator: 'EQ', value1: '{/categoryId}' }] }"> -->
+      <Table visible="false" id="table2">
+        <columns>
+          <Column id="col2">
+            <Label id="label2" text="Label"></Label>
+          </Column>
+        </columns>
+        <dependents>
+          <ColumnListItem id="listitem2" type="Inactive">
+            <Label id="prodname" text="{invoice>ProductName}"></Label>
+          </ColumnListItem>
+        </dependents>
+      </Table>
+    </content>
+  </Page>
+</mvc:View>

@@ -1,0 +1,21 @@
+<mvc:View xmlns:smarttable="sap.ui.comp.smarttable" controllerName="project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Button id="btn" text="Show Dialog" press="onPress"></Button>
+            <Table id="table2" items="{invoice>/Categories}">
+                <columns>
+                    <Column id="col2">
+                        <Label id="label2" text="Label"></Label>
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem id="listitem2" type="Active" press="onPressTableItem">
+                        <Label id="catname2" text="{invoice>CategoryName}"></Label>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>
